@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Presentation Design System */
+
+@layer base {
+  :root {
+    /* Executive Color Palette - Enterprise Grade */
+    --background: 247 100% 98%;
+    --foreground: 215 25% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 17%;
+
+    /* Executive Primary Colors */
+    --primary-executive: 210 44% 18%; /* Deep navy #1a365d */
+    --secondary-corporate: 215 25% 21%; /* Charcoal #2d3748 */
+    --accent-strategic: 213 93% 49%; /* Strategic blue #3182ce */
+    --success-metric: 142 69% 45%; /* Success green #38a169 */
+    --warning-risk: 26 91% 57%; /* Warning amber #ed8936 */
+    --critical-alert: 348 83% 57%; /* Critical red #e53e3e */
+    --background-premium: 220 14% 97%; /* Premium light #f7fafc */
+    --text-executive: 215 25% 17%; /* Executive text #2d3748 */
+
+    --primary: 210 44% 18%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 44% 15%;
+
+    --secondary: 215 25% 21%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 25% 45%;
+
+    --accent: 213 93% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Professional Grays */
+    --neutral-50: 220 14% 96%;
+    --neutral-100: 220 13% 91%;
+    --neutral-200: 220 13% 87%;
+    --neutral-300: 216 12% 84%;
+    --neutral-400: 218 11% 65%;
+    --neutral-500: 220 9% 46%;
+    --neutral-600: 215 14% 34%;
+    --neutral-700: 215 25% 27%;
+    --neutral-800: 217 33% 17%;
+    --neutral-900: 222 84% 5%;
+
+    /* Status Colors */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 48 96% 53%;
+    --warning-foreground: 222 84% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Presentation Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 100% 40%), hsl(195 100% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 14% 96%), hsl(220 13% 91%));
+    --gradient-hero: linear-gradient(135deg, hsl(215 100% 40%) 0%, hsl(195 100% 50%) 50%, hsl(142 71% 45%) 100%);
+
+    /* Professional Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(220 13% 87% / 0.1), 0 2px 4px -1px hsl(220 13% 87% / 0.06);
+    --shadow-elevated: 0 20px 25px -5px hsl(220 13% 87% / 0.1), 0 10px 10px -5px hsl(220 13% 87% / 0.04);
+    --shadow-presentation: 0 25px 50px -12px hsl(215 100% 40% / 0.25);
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 215 100% 40%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 215 100% 50%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --primary-hover: 215 100% 45%;
+
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 195 100% 60%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    --neutral-50: 222 84% 5%;
+    --neutral-100: 217 33% 17%;
+    --neutral-200: 215 25% 27%;
+    --neutral-300: 218 11% 35%;
+    --neutral-400: 220 9% 46%;
+    --neutral-500: 218 11% 65%;
+    --neutral-600: 216 12% 84%;
+    --neutral-700: 220 13% 87%;
+    --neutral-800: 220 13% 91%;
+    --neutral-900: 220 14% 96%;
+
+    --success: 142 71% 55%;
+    --success-foreground: 222 84% 5%;
+    --warning: 48 96% 63%;
+    --warning-foreground: 222 84% 5%;
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 17%;
+    --input: 215 25% 17%;
+    --ring: 215 100% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+
+  /* Executive Typography Hierarchy */
+  .executive-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+
+  .executive-subtitle {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold text-slate-700;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+
+  .executive-body {
+    @apply text-base md:text-lg leading-relaxed text-slate-600;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .executive-data {
+    @apply font-mono text-sm md:text-base tracking-wide text-slate-800;
+  }
+
+  /* Executive Layout Principles */
+  .slide-container {
+    @apply min-h-screen flex flex-col justify-center items-center p-8;
+    aspect-ratio: 16 / 9;
+  }
+
+  .executive-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 2rem;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+  }
+
+  /* Premium Visual Elements */
+  .executive-card {
+    @apply bg-white rounded-2xl shadow-xl border border-slate-200 p-8;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  }
+
+  .metric-card {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 shadow-lg border border-blue-200;
+  }
+
+  .crisis-indicator {
+    @apply bg-gradient-to-r from-red-100 to-orange-100 border-l-4 border-red-500 p-4 rounded-r-lg;
+  }
+
+  .opportunity-indicator {
+    @apply bg-gradient-to-r from-green-100 to-emerald-100 border-l-4 border-green-500 p-4 rounded-r-lg;
+  }
+
+  /* Executive Dashboard Elements */
+  .kpi-widget {
+    @apply bg-white rounded-xl shadow-md border border-slate-200 p-4 hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .roi-display {
+    @apply text-3xl font-bold text-green-600 font-mono tracking-tight;
+  }
+
+  .risk-display {
+    @apply text-2xl font-semibold text-amber-600;
+  }
+
+  /* Professional Animations */
+  .slide-enter {
+    animation: slideEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes slideEnter {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .metric-counter {
+    animation: countUp 2s ease-out;
+  }
+
+  @keyframes countUp {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+}
