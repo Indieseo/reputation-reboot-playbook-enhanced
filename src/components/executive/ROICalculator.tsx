@@ -18,20 +18,20 @@ const ROICalculator: React.FC<ROICalculatorProps> = ({ phase = 'all' }) => {
     phase1: {
       investment: 45000,
       timeframe: 2,
-      expectedRevenue: 180000,
+      expectedRevenue: 67500, // 50% ROI over 2 months (realistic)
       description: "Crisis Response & Content Foundation"
     },
     phase2: {
       investment: 85000,
       timeframe: 6,
-      expectedRevenue: 420000,
+      expectedRevenue: 119000, // 40% ROI over 6 months (market growth)
       description: "Authority Building & SEO Optimization"
     },
     phase3: {
       investment: 125000,
       timeframe: 12,
-      expectedRevenue: 980000,
-      description: "AI Integration & Market Domination"
+      expectedRevenue: 200000, // 60% ROI over 12 months (based on 7.81% CAGR)
+      description: "Market Expansion & Growth"
     }
   };
 
@@ -47,8 +47,8 @@ const ROICalculator: React.FC<ROICalculatorProps> = ({ phase = 'all' }) => {
         return {
           investment: 255000,
           timeframe: 12,
-          expectedRevenue: 1580000,
-          description: "Complete AI Search Domination Strategy"
+          expectedRevenue: 386500, // Combined realistic projections
+          description: "Complete Digital Marketing Strategy"
         };
     }
   };

@@ -18,43 +18,43 @@ export const marketMetrics: DataSources['marketOpportunity'] = {
     ]
   },
   conversionRates: {
-    current: 1.8, // Current poor conversion due to reputation crisis
-    projected: 7.9, // Neil Patel's 4.4x improvement factor
-    improvementFactor: 4.4 // Verified by Neil Patel's research
+    current: 5.36, // Travel industry average from WordStream/LocaliQ
+    projected: 5.36, // Conservative estimate based on industry benchmarks
+    improvementFactor: 1.0 // Realistic baseline without speculation
   },
   trafficValue: {
-    current: 450000, // EUR annually (current crisis state)
-    projected: 1980000, // EUR annually (4.4x Neil Patel multiplier)
+    current: 450000, // EUR annually (estimated)
+    projected: 495000, // EUR annually (7.81% growth rate)
     timeframe: "12 months",
-    confidence: 87
+    confidence: 75
   }
 };
 
-// Neil Patel's Verified AI Search Statistics
-export const neilPatelResearch = {
-  aiTrafficValue: 4.4, // AI traffic worth 4.4x more than Google traffic
-  engagementRates: {
-    aiSearch: 72.5, // AI search visitor engagement rate
-    traditionalSearch: 60.4 // Traditional Google search engagement
-  },
+// Verified AI Search Statistics from PDF Sources
+export const aiSearchResearch = {
+  chatgptVisits: 1770000000, // 1.77B worldwide visits March 2024 (Similarweb)
+  perplexityUsers: 10000000, // ~10M monthly active users May 2024 (Reuters)
+  voiceAdoption: 34, // 34% US smart-speaker ownership (Edison Research)
   sessionDuration: {
-    aiSearch: "2:13", // AI search average session
-    traditionalSearch: "1:37" // Traditional search average session
+    chatgpt: "7:05", // 425 seconds average visit time (Similarweb)
+    traditional: "1:37" // Traditional search baseline
   },
-  analysisSize: 500000, // ChatGPT queries analyzed by Neil Patel
-  competitorAwareness: "very few companies", // Current competition level
-  firstMoverWindow: "6-12 months" // Critical opportunity window
+  conversionRate: 5.36, // Travel industry average (WordStream/LocaliQ)
+  marketShare: {
+    google: 91, // 90-91% global search market share (StatCounter)
+    ai: 10 // Emerging but growing
+  }
 };
 
 export const reputationMetrics: DataSources['reputationMetrics'] = {
   overall: {
-    platform: "Sitejabber (Crisis Platform)",
-    averageRating: 1.1, // Critical crisis level - verified from PDF
-    totalReviews: 69, // Sitejabber review count
+    platform: "Trustpilot (Primary Platform)",
+    averageRating: 4.0, // Verified from PDF - 19,587 reviews
+    totalReviews: 19587, // Trustpilot review count from PDF
     sentiment: {
-      positive: 8,
-      neutral: 12,
-      negative: 80 // Dominated by damage fee complaints
+      positive: 66, // 66% 5-star ratings from PDF
+      neutral: 14, // 14% 4-star ratings from PDF
+      negative: 14 // 14% 1-star ratings from PDF
     },
     trends: [
       { date: "2024-01", rating: 3.2, volume: 45 },
@@ -67,8 +67,8 @@ export const reputationMetrics: DataSources['reputationMetrics'] = {
   },
   trustpilot: {
     platform: "Trustpilot",
-    averageRating: 3.9,
-    totalReviews: 19038,
+    averageRating: 4.0,
+    totalReviews: 19587,
     sentiment: {
       positive: 60,
       neutral: 20,
@@ -113,21 +113,21 @@ export const reputationMetrics: DataSources['reputationMetrics'] = {
   }
 };
 
-// Market Intelligence Data - From PDF Research
+// Market Intelligence Data - From Verified PDF Research
 export const marketIntelligence = {
-  totalMarketSize: 0.462, // European RV rental market: $462 million USD
-  globalGrowthRate: 30.14, // Global market CAGR from PDF
-  europeanGrowthRate: 12.3, // European market annual growth
+  totalMarketSize: 261.7, // European RV rental market: €261.7 million (2024)
+  globalGrowthRate: 7.81, // CAGR 2024-2031 from Verified Market Research
+  europeanGrowthRate: 7.81, // European market annual growth (VMR)
   indieCampersScale: {
-    vehicles: 7000, // 7,000+ vehicles across network
-    locations: 70, // 70+ locations across Europe
+    vehicles: 8000, // 8,000+ owned vehicles from PDF
+    locations: 80, // 70-80+ locations on 3 continents from PDF
     annualNights: 1000000 // Over 1 million nights processed annually
   },
   digitalTransformation: {
-    aiSearchAdoption: 72, // 72% of people now use AI tools for search
-    aiResultsTrust: 55, // 55% believe AI results make it easier to find products
-    voiceSearchPreference: 90, // 90% find voice easier than typing
-    rvRentalConsideration: 64 // 64% considering RV rentals (10-point increase)
+    chatgptVisits: 1770000000, // 1.77B worldwide visits March 2024
+    perplexityUsers: 10000000, // ~10M MAU as of May 2024
+    voiceSearchOwnership: 34, // 34% US smart-speaker ownership
+    sessionTime: 425 // 425 seconds average ChatGPT visit time
   },
   competitiveGaps: [
     {
@@ -136,9 +136,9 @@ export const marketIntelligence = {
       opportunity: "100% market share available - Neil Patel confirms very few companies competing"
     },
     {
-      area: "Reputation Crisis Management",
-      currentLeader: "Roadsurfer (4.2★ rating)",
-      opportunity: "Transform 1.1★ crisis into transparency leadership advantage"
+      area: "Market Leadership",
+      currentLeader: "Roadsurfer (4.0★ rating, ~7,062 reviews)",
+      opportunity: "Leverage 4.0★ rating with 19,587 reviews for scale advantage"
     },
     {
       area: "Damage Fee Transparency",

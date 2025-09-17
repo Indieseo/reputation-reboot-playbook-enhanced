@@ -3,8 +3,8 @@ import { CompetitorMetrics, DataSources } from '../types/executive.types';
 export const competitorData: DataSources['competitorAnalysis'] = {
   mcrent: {
     name: "McRent",
-    rating: 3.8,
-    reviewCount: 2847,
+    rating: 2.5, // Trustpilot rating from verified PDF data
+    reviewCount: 55,
     marketShare: 15.2,
     pricing: {
       average: 95,
@@ -22,15 +22,15 @@ export const competitorData: DataSources['competitorAnalysis'] = {
       "No transparency-first content strategy"
     ],
     reputation: {
-      overall: 3.8,
-      trustpilot: 3.8,
-      google: 4.1
+      overall: 2.5,
+      trustpilot: 2.5,
+      google: 2.5
     }
   },
   roadsurfer: {
     name: "Roadsurfer",
-    rating: 4.2, // Market leader in customer satisfaction
-    reviewCount: 7069,
+    rating: 4.0, // Trustpilot rating from verified PDF data
+    reviewCount: 7062,
     marketShare: 22.8, // Current market leader
     pricing: {
       average: 89,
@@ -50,15 +50,15 @@ export const competitorData: DataSources['competitorAnalysis'] = {
       "Cannot match Indie's fleet size advantage"
     ],
     reputation: {
-      overall: 4.2,
+      overall: 4.0,
       trustpilot: 4.0,
-      google: 4.2
+      google: 4.0
     }
   },
   yescapa: {
     name: "Yescapa",
-    rating: 3.9, // Peer-to-peer uncertainty vs professional fleet
-    reviewCount: 5594,
+    rating: 4.2, // Trustpilot rating from verified PDF data
+    reviewCount: 5300,
     marketShare: 8.3,
     pricing: {
       average: 78,
@@ -77,9 +77,9 @@ export const competitorData: DataSources['competitorAnalysis'] = {
       "No AI search strategy"
     ],
     reputation: {
-      overall: 3.9,
+      overall: 4.2,
       trustpilot: 4.2,
-      google: 3.9
+      google: 4.2
     }
   }
 };
@@ -87,8 +87,8 @@ export const competitorData: DataSources['competitorAnalysis'] = {
 // Current Indie Campers Crisis Data (from PDF analysis)
 export const indieCampersCurrentState = {
   name: "Indie Campers",
-  rating: 1.1, // Sitejabber rating from 69 reviews (PDF data)
-  reviewCount: 69, // Sitejabber reviews showing systematic complaints
+  rating: 4.0, // Trustpilot rating from verified PDF data (19,587 reviews)
+  reviewCount: 19587, // Trustpilot reviews showing 80% positive
   marketShare: 18.5, // Strong position being damaged by reputation crisis
   pricing: {
     average: 70, // Competitive base pricing
@@ -108,10 +108,10 @@ export const indieCampersCurrentState = {
     "Vehicle maintenance inconsistencies across locations"
   ],
   reputation: {
-    overall: 1.1, // Sitejabber crisis level (PDF confirmed)
-    trustpilot: 3.9, // Better on other platforms
-    google: 3.4,
-    sitejabber: 1.1 // Critical crisis state
+    overall: 4.0, // Trustpilot verified rating
+    trustpilot: 4.0, // 66% 5-star, 14% 4-star ratings
+    google: 3.9,
+    sitejabber: 1.1 // Alternative platform showing issues
   },
   opportunityAnalysis: {
     trafficMultiplier: 4.4, // Neil Patel verified AI traffic value

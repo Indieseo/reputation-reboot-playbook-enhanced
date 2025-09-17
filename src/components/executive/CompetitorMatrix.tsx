@@ -11,24 +11,24 @@ const CompetitorMatrix: React.FC<CompetitorMatrixProps> = ({ showProjections = t
   const [selectedMetric, setSelectedMetric] = useState<'rating' | 'marketShare' | 'pricing'>('rating');
   const [hoveredCompetitor, setHoveredCompetitor] = useState<string | null>(null);
 
-  // Clean competitor data with correct Trustpilot ratings
+  // Clean competitor data with correct Trustpilot ratings from verified PDFs
   const competitors = [
     {
       name: 'Indie Campers (Current)',
       shortName: 'IC',
-      rating: 3.9, // Trustpilot rating
+      rating: 4.0, // Trustpilot rating from verified PDF (19,587 reviews)
       marketShare: 18.5,
-      reviewCount: 19038,
+      reviewCount: 19587,
       pricing: 70,
       color: '#ef4444', // Red for crisis
       status: 'crisis'
     },
     {
       name: 'Roadsurfer',
-      shortName: 'RS', 
-      rating: 4.0, // Trustpilot rating
+      shortName: 'RS',
+      rating: 4.0, // Trustpilot rating from verified PDF (≈7,062 reviews)
       marketShare: 22.8,
-      reviewCount: 7069,
+      reviewCount: 7062,
       pricing: 89,
       color: '#8b5cf6', // Purple for leader
       status: 'leader'
@@ -36,9 +36,9 @@ const CompetitorMatrix: React.FC<CompetitorMatrixProps> = ({ showProjections = t
     {
       name: 'McRent',
       shortName: 'MC',
-      rating: 3.8, // Trustpilot rating
+      rating: 2.5, // Trustpilot rating from verified PDF (~55-59 reviews)
       marketShare: 15.2,
-      reviewCount: 2847,
+      reviewCount: 55,
       pricing: 95,
       color: '#f59e0b', // Orange for moderate
       status: 'moderate'
@@ -46,9 +46,9 @@ const CompetitorMatrix: React.FC<CompetitorMatrixProps> = ({ showProjections = t
     {
       name: 'Yescapa',
       shortName: 'YC',
-      rating: 4.2, // Trustpilot rating (from reputation.trustpilot)
+      rating: 4.2, // Trustpilot rating from verified PDF (≈5,300 reviews)
       marketShare: 8.3,
-      reviewCount: 5594,
+      reviewCount: 5300,
       pricing: 78,
       color: '#10b981', // Green for growing
       status: 'growing'
