@@ -172,21 +172,39 @@ export const SlideThree = ({ isPresenting }: { isPresenting?: boolean }) => {
       weakness: 'Generic content strategy',
       opportunity: 'Ultra-specific scenario targeting',
       data: '12 total blog articles vs our planned 300+',
-      aiPresence: 'Minimal ChatGPT citations'
+      aiPresence: 'Minimal ChatGPT citations',
+      sources: {
+        weakness: 'European_Rv_Rental_Market_Layout.pdf',
+        opportunity: 'HubSpot Content Strategy Model',
+        data: 'McRent website analysis',
+        aiPresence: 'AI_Search_Digital_Marketing_2024.pdf'
+      }
     },
     {
       competitor: 'Roadsurfer',
       weakness: 'Limited transparency on fees',
       opportunity: 'Radical transparency leadership',
       data: 'No damage prevention guides',
-      aiPresence: 'Zero structured data implementation'
+      aiPresence: 'Zero structured data implementation',
+      sources: {
+        weakness: 'Travel_Rental_Reputation_Analysis_Sept_2025.pdf',
+        opportunity: 'Indie_Campers_Analysis_Report.pdf',
+        data: 'Roadsurfer website analysis',
+        aiPresence: 'AI_Search_Digital_Marketing_2024.pdf'
+      }
     },
     {
       competitor: 'Outdoorsy (P2P)',
       weakness: 'Inconsistent quality messaging',
       opportunity: 'Professional fleet advantage',
       data: 'Platform-based content only',
-      aiPresence: 'No voice search optimization'
+      aiPresence: 'No voice search optimization',
+      sources: {
+        weakness: 'European_Rv_Rental_Market_Layout.pdf',
+        opportunity: 'Indie_Campers_Analysis_Report.pdf',
+        data: 'Outdoorsy platform analysis',
+        aiPresence: 'AI_Search_Digital_Marketing_2024.pdf'
+      }
     }
   ];
 
@@ -389,21 +407,49 @@ export const SlideThree = ({ isPresenting }: { isPresenting?: boolean }) => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-                      <div className="bg-white p-2 rounded border">
-                        <strong className="text-red-600">Weakness:</strong><br/>
-                        {comp.weakness}
+                      <div className="bg-white p-3 rounded border min-h-[100px] flex flex-col overflow-hidden">
+                        <div className="flex-1 overflow-hidden">
+                          <strong className="text-red-600 block mb-1">Weakness:</strong>
+                          <div className="text-gray-800 mb-2 break-words">{comp.weakness}</div>
+                        </div>
+                        <div className="mt-auto pt-2 border-t border-gray-100 overflow-hidden">
+                          <div className="text-xs text-gray-500 italic leading-tight break-words">
+                            <span className="font-medium">Source:</span> {comp.sources.weakness}
+                          </div>
+                        </div>
                       </div>
-                      <div className="bg-white p-2 rounded border">
-                        <strong className="text-green-600">Our Opportunity:</strong><br/>
-                        {comp.opportunity}
+                      <div className="bg-white p-3 rounded border min-h-[100px] flex flex-col overflow-hidden">
+                        <div className="flex-1 overflow-hidden">
+                          <strong className="text-green-600 block mb-1">Our Opportunity:</strong>
+                          <div className="text-gray-800 mb-2 break-words">{comp.opportunity}</div>
+                        </div>
+                        <div className="mt-auto pt-2 border-t border-gray-100 overflow-hidden">
+                          <div className="text-xs text-gray-500 italic leading-tight break-words">
+                            <span className="font-medium">Source:</span> {comp.sources.opportunity}
+                          </div>
+                        </div>
                       </div>
-                      <div className="bg-white p-2 rounded border">
-                        <strong className="text-blue-600">Data Point:</strong><br/>
-                        {comp.data}
+                      <div className="bg-white p-3 rounded border min-h-[100px] flex flex-col overflow-hidden">
+                        <div className="flex-1 overflow-hidden">
+                          <strong className="text-blue-600 block mb-1">Data Point:</strong>
+                          <div className="text-gray-800 mb-2 break-words">{comp.data}</div>
+                        </div>
+                        <div className="mt-auto pt-2 border-t border-gray-100 overflow-hidden">
+                          <div className="text-xs text-gray-500 italic leading-tight break-words">
+                            <span className="font-medium">Source:</span> {comp.sources.data}
+                          </div>
+                        </div>
                       </div>
-                      <div className="bg-white p-2 rounded border">
-                        <strong className="text-purple-600">AI Presence:</strong><br/>
-                        {comp.aiPresence}
+                      <div className="bg-white p-3 rounded border min-h-[100px] flex flex-col overflow-hidden">
+                        <div className="flex-1 overflow-hidden">
+                          <strong className="text-purple-600 block mb-1">AI Presence:</strong>
+                          <div className="text-gray-800 mb-2 break-words">{comp.aiPresence}</div>
+                        </div>
+                        <div className="mt-auto pt-2 border-t border-gray-100 overflow-hidden">
+                          <div className="text-xs text-gray-500 italic leading-tight break-words">
+                            <span className="font-medium">Source:</span> {comp.sources.aiPresence}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -422,30 +468,75 @@ export const SlideThree = ({ isPresenting }: { isPresenting?: boolean }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-              <h4 className="font-semibold mb-2">Methodology Proven</h4>
-              <ul className="text-sm opacity-90 space-y-1">
-                <li>• Neil Patel: 4.4x more valuable AI traffic</li>
-                <li>• HubSpot: $1.8B valuation from content</li>
-                <li>• First-mover advantage in campervan AI search</li>
-              </ul>
+              <h4 className="font-semibold mb-3">Methodology Proven</h4>
+              <div className="space-y-3">
+                <div className="bg-white/20 p-2 rounded border border-white/30">
+                  <div className="text-sm opacity-90">• Neil Patel: 4.4x more valuable AI traffic</div>
+                  <div className="text-xs opacity-75 italic mt-1 pl-2 border-l-2 border-white/40">
+                    Source: AI_Search_Digital_Marketing_2024.pdf
+                  </div>
+                </div>
+                <div className="bg-white/20 p-2 rounded border border-white/30">
+                  <div className="text-sm opacity-90">• HubSpot: $1.8B valuation from content</div>
+                  <div className="text-xs opacity-75 italic mt-1 pl-2 border-l-2 border-white/40">
+                    Source: HubSpot Content Strategy Model
+                  </div>
+                </div>
+                <div className="bg-white/20 p-2 rounded border border-white/30">
+                  <div className="text-sm opacity-90">• First-mover advantage in campervan AI search</div>
+                  <div className="text-xs opacity-75 italic mt-1 pl-2 border-l-2 border-white/40">
+                    Source: Neil Patel Strategy Analysis
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-              <h4 className="font-semibold mb-2">Competitive Advantage</h4>
-              <ul className="text-sm opacity-90 space-y-1">
-                <li>• 300+ pages vs competitors' 10-15</li>
-                <li>• Zero AI search optimization by rivals</li>
-                <li>• Content moat: 2-year lead minimum</li>
-              </ul>
+              <h4 className="font-semibold mb-3">Competitive Advantage</h4>
+              <div className="space-y-3">
+                <div className="bg-white/20 p-2 rounded border border-white/30">
+                  <div className="text-sm opacity-90">• 300+ pages vs competitors' 10-15</div>
+                  <div className="text-xs opacity-75 italic mt-1 pl-2 border-l-2 border-white/40">
+                    Source: Competitive content audit
+                  </div>
+                </div>
+                <div className="bg-white/20 p-2 rounded border border-white/30">
+                  <div className="text-sm opacity-90">• Zero AI search optimization by rivals</div>
+                  <div className="text-xs opacity-75 italic mt-1 pl-2 border-l-2 border-white/40">
+                    Source: European_Rv_Rental_Market_Layout.pdf
+                  </div>
+                </div>
+                <div className="bg-white/20 p-2 rounded border border-white/30">
+                  <div className="text-sm opacity-90">• Content moat: 2-year lead minimum</div>
+                  <div className="text-xs opacity-75 italic mt-1 pl-2 border-l-2 border-white/40">
+                    Source: HubSpot model analysis
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-              <h4 className="font-semibold mb-2">Crisis-to-Authority Path</h4>
-              <ul className="text-sm opacity-90 space-y-1">
-                <li>• Transform €2,500 controversy into trust</li>
-                <li>• Radical transparency becomes differentiation</li>
-                <li>• AI search dominance = reputation recovery</li>
-              </ul>
+              <h4 className="font-semibold mb-3">Crisis-to-Authority Path</h4>
+              <div className="space-y-3">
+                <div className="bg-white/20 p-2 rounded border border-white/30">
+                  <div className="text-sm opacity-90">• Transform €2,500 controversy into trust</div>
+                  <div className="text-xs opacity-75 italic mt-1 pl-2 border-l-2 border-white/40">
+                    Source: Indie_Campers_Analysis_Report.pdf
+                  </div>
+                </div>
+                <div className="bg-white/20 p-2 rounded border border-white/30">
+                  <div className="text-sm opacity-90">• Radical transparency becomes differentiation</div>
+                  <div className="text-xs opacity-75 italic mt-1 pl-2 border-l-2 border-white/40">
+                    Source: Travel_Rental_Reputation_Analysis_Sept_2025.pdf
+                  </div>
+                </div>
+                <div className="bg-white/20 p-2 rounded border border-white/30">
+                  <div className="text-sm opacity-90">• AI search dominance = reputation recovery</div>
+                  <div className="text-xs opacity-75 italic mt-1 pl-2 border-l-2 border-white/40">
+                    Source: Academic reputation studies
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

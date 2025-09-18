@@ -8,7 +8,7 @@ export const ExecutiveSummarySlide = ({ isPresenting }: { isPresenting?: boolean
     currentCrisis: {
       severity: "Critical",
       impact: "€2.5M Revenue at Risk",
-      scope: "1.1★ Sitejabber + €2,500 Fee Crisis"
+      scope: "€2,500 Fee Crisis + Reputation Challenges"
     },
     opportunitySize: { trafficValue: "4.4x", engagementRate: "72.5% vs 60.4%" },
     timeToImpact: { phase1: "2 months", fullImplementation: "12 months" },
@@ -114,7 +114,7 @@ export const ExecutiveSummarySlide = ({ isPresenting }: { isPresenting?: boolean
             <h3 className="executive-subtitle mb-4">30-Second Business Case</h3>
             <div className="executive-body space-y-3">
               <p>
-                <strong>Crisis:</strong> 1.1★ Sitejabber rating from €2,500 damage fee controversy, 50-minute WhatsApp delays,
+                <strong>Crisis:</strong> €2,500 damage fee controversy, 50-minute WhatsApp delays,
                 and "Premium Insurance is A SCAM" customer feedback creating toxic AI search context.
               </p>
               <p>
@@ -139,25 +139,27 @@ export const ExecutiveSummarySlide = ({ isPresenting }: { isPresenting?: boolean
             className="executive-card"
           >
             <h3 className="executive-subtitle mb-4">Competitive Advantage</h3>
-            <div className="space-y-3">
-              {[
-                "European RV market €462M + 30.14% CAGR growth capture",
-                "Transform €2,500 fee crisis into transparency leadership",
-                "4.4x premium traffic (Neil Patel validated data)",
-                "300+ content pages creating insurmountable competitor barrier",
-                "6-month first-mover window before market adaptation"
-              ].map((advantage, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.8 + index * 0.1 }}
-                  className="flex items-center gap-2"
-                >
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="executive-body text-sm">{advantage}</span>
-                </motion.div>
-              ))}
+            <div className="executive-body space-y-3">
+              <p>
+                <strong>Market Leadership Opportunity:</strong> The European RV rental market represents €261.7M 
+                growing at 7.81% CAGR (Verified Market Research), with Indie Campers positioned to capture 
+                disproportionate share through AI search domination.
+              </p>
+              <p>
+                <strong>Crisis Transformation:</strong> The €2,500 damage fee controversy becomes our competitive 
+                advantage through transparency-first content strategy. While competitors hide behind policies, 
+                we educate customers, building trust and authority.
+              </p>
+              <p>
+                <strong>Traffic Value Premium:</strong> Neil Patel's research validates AI search traffic at 4.4x 
+                higher value with 72.5% engagement rates vs 60.4% traditional search. Current competition is 
+                minimal - "very few companies competing" in RV space.
+              </p>
+              <p>
+                <strong>Content Moat Strategy:</strong> HubSpot's proven model: 300+ ultra-specific pages vs 
+                competitors' 3 broad pages creates insurmountable barrier. First-mover advantage provides 
+                6-month window before market adaptation.
+              </p>
             </div>
           </motion.div>
         </div>

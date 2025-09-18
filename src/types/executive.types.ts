@@ -226,3 +226,33 @@ export interface CrisisResponseMetrics {
   };
   riskMitigation: RiskFactor[];
 }
+
+export interface Citation {
+  id: string;
+  title: string;
+  source: string;
+  type: 'academic' | 'industry_report' | 'government' | 'company_data' | 'benchmark';
+  url?: string;
+  date: string;
+  methodology?: string;
+  sampleSize?: string;
+  keyFindings: string[];
+  page?: number;
+  reliability: 'high' | 'medium' | 'low';
+}
+
+export interface DataPoint {
+  value: number | string;
+  metric: string;
+  citations: Citation[];
+  verificationLevel: 'verified' | 'estimated' | 'projected';
+  context?: string;
+}
+
+export interface CitationDatabase {
+  hospitalityBenchmarks: Citation[];
+  marketResearch: Citation[];
+  reputationStudies: Citation[];
+  competitorAnalysis: Citation[];
+  financialImpact: Citation[];
+}

@@ -79,8 +79,8 @@ export const InsuranceTransparencyModal: React.FC<InsuranceTransparencyModalProp
                   <h4 className="font-bold text-red-800 mb-2">Impact Metrics</h4>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-red-700">Sitejabber Rating:</span>
-                      <span className="font-bold text-red-800">1.1★ (69 reviews)</span>
+                      <span className="text-red-700">Reputation Status:</span>
+                      <span className="font-bold text-red-800">Requires Attention</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-red-700">Trust Crisis Level:</span>

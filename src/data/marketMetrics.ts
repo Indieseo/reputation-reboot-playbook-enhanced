@@ -1,4 +1,5 @@
 import { DataSources } from '../types/executive.types';
+import { getCitationById } from './citations';
 
 export const marketMetrics: DataSources['marketOpportunity'] = {
   aiSearchVolume: {
@@ -49,12 +50,12 @@ export const aiSearchResearch = {
 export const reputationMetrics: DataSources['reputationMetrics'] = {
   overall: {
     platform: "Trustpilot (Primary Platform)",
-    averageRating: 4.0, // Verified from PDF - 19,587 reviews
-    totalReviews: 19587, // Trustpilot review count from PDF
+    averageRating: 4.0, // Source: Travel_Rental_Reputation_Analysis_Sept_2025.pdf
+    totalReviews: 19587, // Source: Travel_Rental_Reputation_Analysis_Sept_2025.pdf
     sentiment: {
-      positive: 66, // 66% 5-star ratings from PDF
-      neutral: 14, // 14% 4-star ratings from PDF
-      negative: 14 // 14% 1-star ratings from PDF
+      positive: 66, // 66% 5-star ratings - Source: Indie_Campers_Analysis_Report.pdf
+      neutral: 14, // 14% 4-star ratings - Source: Indie_Campers_Analysis_Report.pdf
+      negative: 14 // 14% 1-star ratings - Source: Indie_Campers_Analysis_Report.pdf
     },
     trends: [
       { date: "2024-01", rating: 3.2, volume: 45 },
@@ -115,9 +116,9 @@ export const reputationMetrics: DataSources['reputationMetrics'] = {
 
 // Market Intelligence Data - From Verified PDF Research
 export const marketIntelligence = {
-  totalMarketSize: 261.7, // European RV rental market: €261.7 million (2024)
-  globalGrowthRate: 7.81, // CAGR 2024-2031 from Verified Market Research
-  europeanGrowthRate: 7.81, // European market annual growth (VMR)
+  totalMarketSize: 261.7, // European RV rental market: €261.7 million (2024) - Source: European_Rv_Rental_Market_PDF.pdf (VMR)
+  globalGrowthRate: 7.81, // CAGR 2024-2031 from Verified Market Research - Source: European_Rv_Rental_Market_PDF.pdf
+  europeanGrowthRate: 7.81, // European market annual growth (VMR) - Source: European_Rv_Rental_Market_PDF.pdf
   indieCampersScale: {
     vehicles: 8000, // 8,000+ owned vehicles from PDF
     locations: 80, // 70-80+ locations on 3 continents from PDF
@@ -151,7 +152,7 @@ export const marketIntelligence = {
       opportunity: "90% of users prefer voice - untapped market"
     }
   ],
-  // Real Customer Pain Points from Sitejabber & Reddit Analysis
+  // Real Customer Pain Points from Customer Feedback & Reddit Analysis
   customerPainPoints: [
     "€2,500 damage fee controversy (Premium Insurance SCAM complaints)",
     "50-minute WhatsApp response delays",

@@ -59,8 +59,8 @@ export const ReputationManagementModal: React.FC<ReputationManagementModalProps>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="text-center p-3 bg-red-50 rounded border border-red-200">
                     <AlertTriangle className="w-6 h-6 text-red-600 mx-auto mb-2" />
-                    <div className="font-bold text-red-600">1.1★</div>
-                    <div className="text-sm text-red-700">Sitejabber Rating (69 reviews)</div>
+                    <div className="font-bold text-red-600">Crisis</div>
+                    <div className="text-sm text-red-700">Reputation Challenges</div>
                   </div>
                   <div className="text-center p-3 bg-red-50 rounded border border-red-200">
                     <Shield className="w-6 h-6 text-red-600 mx-auto mb-2" />
@@ -305,8 +305,8 @@ export const ReputationManagementModal: React.FC<ReputationManagementModalProps>
                     <h5 className="font-semibold text-purple-800 mb-2">Review Platform Improvement</h5>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-purple-700">Sitejabber rating:</span>
-                        <span className="font-bold text-green-600">1.1★ → 4.2★</span>
+                        <span className="text-purple-700">Platform rating:</span>
+                        <span className="font-bold text-green-600">Crisis → 4.2★</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-purple-700">Google reviews:</span>

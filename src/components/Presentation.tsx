@@ -13,20 +13,24 @@ import { SlideNine } from './slides/SlideNine';
 import { BlogStrategySlide } from './slides/BlogStrategySlide';
 import { ExecutiveSummarySlide } from './slides-enterprise/ExecutiveSummarySlide';
 import { MarketIntelligenceSlide } from './slides-enterprise/MarketIntelligenceSlide';
+import { SourcesSlide } from './slides/SourcesSlide';
+import { ExecutiveDashboardSlide } from './slides/ExecutiveDashboardSlide';
 import PresentationController from './presentation/PresentationController';
 import { usePresentationStore } from '../store/presentationStore';
 
 const slides = [
   { id: 1, component: ExecutiveSummarySlide, title: "Executive Summary", enterprise: true },
   { id: 2, component: MarketIntelligenceSlide, title: "Market Intelligence Deep Dive", enterprise: true },
-  { id: 3, component: SlideThree, title: "Strategic Framework Validation" },
-  { id: 4, component: SlideFour, title: "Phase 1: Crisis Response (2 Months)" },
-  { id: 5, component: SlideFive, title: "Phase 2: Authority Building (6 Months)" },
-  { id: 6, component: SlideSix, title: "Phase 3: AI Integration (12 Months)" },
-  { id: 7, component: BlogStrategySlide, title: "Blog Strategy Framework", enterprise: true },
-  { id: 8, component: SlideSeven, title: "Technical Architecture & Implementation" },
-  { id: 9, component: SlideEight, title: "Metrics, Analytics & ROI Tracking" },
-  { id: 10, component: SlideNine, title: "Execution Roadmap & Next Steps" },
+  { id: 3, component: ExecutiveDashboardSlide, title: "Executive KPI Dashboard", enterprise: true },
+  { id: 4, component: SlideThree, title: "Strategic Framework Validation" },
+  { id: 5, component: SlideFour, title: "Phase 1: Crisis Response (2 Months)" },
+  { id: 6, component: SlideFive, title: "Phase 2: Authority Building (6 Months)" },
+  { id: 7, component: SlideSix, title: "Phase 3: AI Integration (12 Months)" },
+  { id: 8, component: BlogStrategySlide, title: "Blog Strategy Framework", enterprise: true },
+  { id: 9, component: SlideSeven, title: "Technical Architecture & Implementation" },
+  { id: 10, component: SlideEight, title: "Metrics, Analytics & ROI Tracking" },
+  { id: 11, component: SlideNine, title: "Execution Roadmap & Next Steps" },
+  { id: 12, component: SourcesSlide, title: "Data Sources & Citations", enterprise: true },
 ];
 
 const classicSlides = [

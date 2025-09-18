@@ -1,10 +1,11 @@
 import { CompetitorMetrics, DataSources } from '../types/executive.types';
+import { getCitationById } from './citations';
 
 export const competitorData: DataSources['competitorAnalysis'] = {
   mcrent: {
     name: "McRent",
-    rating: 2.5, // Trustpilot rating from verified PDF data
-    reviewCount: 55,
+    rating: 2.5, // Source: European_Rv_Rental_Market_PDF.pdf (~2.5 with ~55-59 reviews)
+    reviewCount: 55, // Source: European_Rv_Rental_Market_PDF.pdf
     marketShare: 15.2,
     pricing: {
       average: 95,
@@ -29,8 +30,8 @@ export const competitorData: DataSources['competitorAnalysis'] = {
   },
   roadsurfer: {
     name: "Roadsurfer",
-    rating: 4.0, // Trustpilot rating from verified PDF data
-    reviewCount: 7062,
+    rating: 4.0, // Source: European_Rv_Rental_Market_PDF.pdf (4.0 with ≈7,062 reviews)
+    reviewCount: 7062, // Source: European_Rv_Rental_Market_PDF.pdf
     marketShare: 22.8, // Current market leader
     pricing: {
       average: 89,
@@ -57,8 +58,8 @@ export const competitorData: DataSources['competitorAnalysis'] = {
   },
   yescapa: {
     name: "Yescapa",
-    rating: 4.2, // Trustpilot rating from verified PDF data
-    reviewCount: 5300,
+    rating: 4.2, // Source: European_Rv_Rental_Market_PDF.pdf (4.2 with ≈5,300 reviews)
+    reviewCount: 5300, // Source: European_Rv_Rental_Market_PDF.pdf
     marketShare: 8.3,
     pricing: {
       average: 78,
@@ -87,8 +88,8 @@ export const competitorData: DataSources['competitorAnalysis'] = {
 // Current Indie Campers Crisis Data (from PDF analysis)
 export const indieCampersCurrentState = {
   name: "Indie Campers",
-  rating: 4.0, // Trustpilot rating from verified PDF data (19,587 reviews)
-  reviewCount: 19587, // Trustpilot reviews showing 80% positive
+  rating: 4.0, // Source: Travel_Rental_Reputation_Analysis_Sept_2025.pdf & Indie_Campers_Analysis_Report.pdf
+  reviewCount: 19587, // Source: Travel_Rental_Reputation_Analysis_Sept_2025.pdf & Indie_Campers_Analysis_Report.pdf
   marketShare: 18.5, // Strong position being damaged by reputation crisis
   pricing: {
     average: 70, // Competitive base pricing
@@ -110,8 +111,7 @@ export const indieCampersCurrentState = {
   reputation: {
     overall: 4.0, // Trustpilot verified rating
     trustpilot: 4.0, // 66% 5-star, 14% 4-star ratings
-    google: 3.9,
-    sitejabber: 1.1 // Alternative platform showing issues
+    google: 3.9
   },
   opportunityAnalysis: {
     trafficMultiplier: 4.4, // Neil Patel verified AI traffic value

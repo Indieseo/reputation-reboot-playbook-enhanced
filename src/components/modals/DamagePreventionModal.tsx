@@ -55,8 +55,8 @@ export const DamagePreventionModal: React.FC<DamagePreventionModalProps> = ({ is
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-red-700">Sitejabber Rating:</span>
-                  <span className="font-bold text-red-800">1.1★ (69 reviews)</span>
+                  <span className="text-red-700">Reputation Status:</span>
+                  <span className="font-bold text-red-800">Requires Attention</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-red-700">Primary Complaint:</span>
