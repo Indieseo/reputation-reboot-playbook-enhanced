@@ -26,8 +26,8 @@ export const usePresentationStore = create<PresentationStore>((set, get) => ({
   // Initial state
   slideManagement: {
     currentSlide: 0,
-    totalSlides: 10,
-    timePerSlide: new Array(10).fill(0),
+    totalSlides: 13,
+    timePerSlide: new Array(13).fill(0),
     presenterNotes: [
       "Executive Summary: Focus on crisis urgency and 4.4x opportunity multiplier",
       "Market Intelligence: Emphasize competitive gaps and AI search revolution",
@@ -38,7 +38,9 @@ export const usePresentationStore = create<PresentationStore>((set, get) => ({
       "Technical Architecture: Scalable, enterprise-grade implementation",
       "Metrics & Analytics: Real-time ROI tracking and competitive monitoring",
       "Investment & ROI: 420% ROI with 12-month payback period",
-      "Execution Roadmap: Clear milestones, risk mitigation, success metrics"
+      "Division of Labor: Clear task assignment and team responsibilities",
+      "Execution Roadmap: Clear milestones, risk mitigation, success metrics",
+      "Data Sources: Comprehensive citation and source attribution"
     ]
   },
   
@@ -49,7 +51,7 @@ export const usePresentationStore = create<PresentationStore>((set, get) => ({
   },
   
   analytics: {
-    slideViewTime: new Array(10).fill(0),
+    slideViewTime: new Array(13).fill(0),
     interactionHeatmap: [],
     executiveEngagement: {
       attentionScore: 85,

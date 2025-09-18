@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell, Legend, Tooltip } from 'recharts';
 import { TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Target, Users, DollarSign, Star } from 'lucide-react';
 
 interface ExecutiveDashboardProps {
@@ -372,16 +372,42 @@ const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ timeframe = 'cu
         {/* Reputation Recovery Timeline */}
         <div className="executive-card">
           <h4 className="font-semibold text-gray-800 mb-4">Reputation Recovery Timeline</h4>
-          <ResponsiveContainer width="100%" height={250}>
-            <LineChart data={reputationTimeline}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis domain={[0, 5]} />
+          <ResponsiveContainer width="100%" height={280}>
+            <LineChart data={reputationTimeline} margin={{ top: 20, right: 30, left: 20, bottom: 60 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+              <XAxis 
+                dataKey="month" 
+                tick={{ fontSize: 12 }}
+                tickLine={{ stroke: '#6b7280' }}
+                axisLine={{ stroke: '#6b7280' }}
+              />
+              <YAxis 
+                domain={[0, 5]} 
+                tick={{ fontSize: 12 }}
+                tickLine={{ stroke: '#6b7280' }}
+                axisLine={{ stroke: '#6b7280' }}
+                label={{ value: 'Rating (★)', angle: -90, position: 'insideLeft', style: { textAnchor: 'middle' } }}
+              />
+              <Tooltip 
+                contentStyle={{ 
+                  backgroundColor: '#f8fafc', 
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '8px',
+                  fontSize: '12px'
+                }}
+                formatter={(value, name) => [`${value}★`, name]}
+              />
+              <Legend 
+                wrapperStyle={{ paddingTop: '20px' }}
+                iconType="line"
+              />
               <Line 
                 type="monotone" 
                 dataKey="current" 
                 stroke="#EF4444" 
                 strokeWidth={3}
+                dot={{ fill: '#EF4444', strokeWidth: 2, r: 4 }}
+                activeDot={{ r: 6, stroke: '#EF4444', strokeWidth: 2 }}
                 name="Current State"
               />
               <Line 
@@ -390,23 +416,73 @@ const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ timeframe = 'cu
                 stroke="#10B981" 
                 strokeWidth={3}
                 strokeDasharray="5 5"
+                dot={{ fill: '#10B981', strokeWidth: 2, r: 4 }}
+                activeDot={{ r: 6, stroke: '#10B981', strokeWidth: 2 }}
                 name="Projected Recovery"
               />
             </LineChart>
           </ResponsiveContainer>
+          
+          {/* Data Source Explanation */}
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg border-l-4 border-red-500">
+            <h5 className="font-medium text-gray-800 mb-2">Data Assessment & Compilation</h5>
+            <div className="text-sm text-gray-600 space-y-1">
+              <p><strong>Current State Data:</strong> Travel_Rental_Reputation_Analysis_Sept_2025.pdf - Monthly rating analysis from Trustpilot (19,587 reviews) and Sitejabber (69 reviews)</p>
+              <p><strong>Projected Recovery:</strong> Indie_Campers_Analysis_Report.pdf - Based on transparency strategy implementation and academic reputation recovery studies</p>
+              <p><strong>Methodology:</strong> 6-month rolling average with crisis intervention modeling from Marketing Science journal research</p>
+            </div>
+          </div>
         </div>
 
         {/* Market Position */}
         <div className="executive-card">
           <h4 className="font-semibold text-gray-800 mb-4">Competitive Market Position</h4>
-          <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={competitorComparison}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Bar dataKey="marketShare" fill="#3B82F6" />
+          <ResponsiveContainer width="100%" height={280}>
+            <BarChart data={competitorComparison} margin={{ top: 20, right: 30, left: 20, bottom: 60 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+              <XAxis 
+                dataKey="name" 
+                tick={{ fontSize: 12 }}
+                tickLine={{ stroke: '#6b7280' }}
+                axisLine={{ stroke: '#6b7280' }}
+                angle={-45}
+                textAnchor="end"
+                height={80}
+              />
+              <YAxis 
+                tick={{ fontSize: 12 }}
+                tickLine={{ stroke: '#6b7280' }}
+                axisLine={{ stroke: '#6b7280' }}
+                label={{ value: 'Market Share (%)', angle: -90, position: 'insideLeft', style: { textAnchor: 'middle' } }}
+              />
+              <Tooltip 
+                contentStyle={{ 
+                  backgroundColor: '#f8fafc', 
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '8px',
+                  fontSize: '12px'
+                }}
+                formatter={(value, name) => [`${value}%`, 'Market Share']}
+              />
+              <Bar 
+                dataKey="marketShare" 
+                fill="#3B82F6" 
+                radius={[4, 4, 0, 0]}
+                stroke="#1e40af"
+                strokeWidth={1}
+              />
             </BarChart>
           </ResponsiveContainer>
+          
+          {/* Data Source Explanation */}
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+            <h5 className="font-medium text-gray-800 mb-2">Data Assessment & Compilation</h5>
+            <div className="text-sm text-gray-600 space-y-1">
+              <p><strong>Market Share Data:</strong> European_Rv_Rental_Market_Layout.pdf - Verified Market Research analysis of €261.7M European RV rental market</p>
+              <p><strong>Competitor Ratings:</strong> Travel_Rental_Reputation_Analysis_Sept_2025.pdf - Trustpilot verified ratings: Roadsurfer (4.0★), Yescapa (4.2★), McRent (2.5★)</p>
+              <p><strong>Projection Methodology:</strong> Indie_Campers_Analysis_Report.pdf - AI search domination strategy impact on market share capture</p>
+            </div>
+          </div>
         </div>
       </div>
 
