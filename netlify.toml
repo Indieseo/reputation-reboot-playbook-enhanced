@@ -9,3 +9,14 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+# Enable Netlify Identity
+[identity]
+  [identity.settings]
+    roles = ["admin", "user"]
+    
+# Prevent search indexing for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
