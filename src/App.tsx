@@ -58,7 +58,7 @@ const App = () => {
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold text-gray-800 mb-2">
-              Reputation Reboot Playbook
+              SEO Roadmap
             </h1>
             <p className="text-gray-600">Executive Strategy Presentation</p>
           </div>
@@ -79,7 +79,6 @@ const App = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="your.name@indiecampers.com"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
